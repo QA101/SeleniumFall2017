@@ -1,6 +1,6 @@
 package Tests.WeekOne;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import Main.WeekOne;
 
