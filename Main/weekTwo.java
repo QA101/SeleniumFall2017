@@ -1,9 +1,10 @@
 package Main;
 
+import java.util.Scanner;
+
 public class weekTwo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 	
@@ -15,6 +16,7 @@ public class weekTwo {
 	 * Function should use a while loop
 	 */
 	public static int LocateInArrayWhileLoop(int[] input, int FindMe){
+
 		return 0;
 	}
 	
@@ -44,9 +46,7 @@ public class weekTwo {
 	 * 
 	 * Then the function should increment the variable x while x is less than upper
 	 */
-	public static void LowerUpperLoop(int x){
-		
-	}
+	
 	
 	public static String ForLoop(int n, String myString){
 		String returnString = "";
