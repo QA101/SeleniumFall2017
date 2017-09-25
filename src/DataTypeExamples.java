@@ -1,5 +1,5 @@
-package Main;
-public class WeekOne {
+package src;
+public class DataTypeExamples {
 	public static void main(String args[]){
 
 	}

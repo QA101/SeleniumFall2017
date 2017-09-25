@@ -1,4 +1,4 @@
-package Main;
+package src;
 
 public class WhileLoops {
 
