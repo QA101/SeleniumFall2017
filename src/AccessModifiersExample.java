@@ -9,7 +9,7 @@ public class AccessModifiersExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		AccessModifiersExample myObject = new AccessModifiersExample();
-		System.out.println();
+
 		//MyPrivateMethod();
 		//myObject.MyPrivateMethod();
 		
