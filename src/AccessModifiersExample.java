@@ -5,6 +5,7 @@ public class AccessModifiersExample {
 	static int myGlobal = 10;
 	static int mySecondGlobal = 10;
 	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		AccessModifiersExample myObject = new AccessModifiersExample();
