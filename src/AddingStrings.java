@@ -30,6 +30,7 @@ public class AddingStrings {
 		/*
 		 * Say that you want to actually add the ints first then add them to the string.
 		 * You can do this through parentheses
+		 * 
 		 */
 		String myOtherString = (x + y) +"STRING" + (x + y);
 		System.out.println(myOtherString);
