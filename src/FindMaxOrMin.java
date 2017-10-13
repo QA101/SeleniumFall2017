@@ -9,6 +9,7 @@ public class FindMaxOrMin {
 	int[] tracking = new int[5];
 	int curr = 0;
 	boolean running = true;
+	boolean building = true;
 	
 	
 	/**
@@ -18,16 +19,19 @@ public class FindMaxOrMin {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
 		Scanner console = new Scanner(System.in);
 		
 		FindMaxOrMin FindIt = new FindMaxOrMin();
 
 		while(FindIt.running) {
-			System.out.println("Enter ints:");
 			FindIt.CreateNewRun();
-			FindIt.ProcessInput(console);
+			System.out.println("Enter ints:");
+			while(FindIt.building) {
+				FindIt.ProcessInput(console.nextLine());
+			}
+			FindIt.building = true;
 		}
+		console.close();
 	}
 	
 	/**
@@ -40,7 +44,6 @@ public class FindMaxOrMin {
 		curr = 0;
 	}
 	
-	
 	/**
 	 * 
 	 * Takes an scanner to process all input
@@ -49,38 +52,32 @@ public class FindMaxOrMin {
 	 * 
 	 * @param console
 	 */
-	private void ProcessInput(Scanner console) {
-		String input = "";
-
-		boolean building = true;
-		while(building) {
-			input = console.nextLine();
-			try {
-				tracking[curr] = Integer.parseInt(input);
-				curr++;
-				if(curr == tracking.length-1) {
-					tracking = resize(tracking);
-				}
-			} catch(java.lang.NumberFormatException ime_exception){
-				if ( input.toUpperCase().equals(ExitString)){
-					System.out.println("Good-bye");
-					running = false;
-					building = false;
-				}
-				else if (input.toUpperCase().equals(FindMaxString)) {
-					System.out.println(FindTheMax(tracking));
-					building = false;
-				}
-				else if (input.toUpperCase().equals(FindMinString)) {
-					System.out.println(FindTheMin(tracking));
-					building = false;
-				}
-				else {
-					System.out.println("Thats not an int");
-				}
-			} catch(Exception e ) {
-				
+	private void ProcessInput(String input) {
+		try {
+			tracking[curr] = Integer.parseInt(input);
+			curr++;
+			if(curr == tracking.length-1) {
+				tracking = resize(tracking);
 			}
+		} catch(java.lang.NumberFormatException ime_exception){
+			if ( input.toUpperCase().equals(ExitString)){
+				System.out.println("Good-bye");
+				running = false;
+				building = false;
+			}
+			else if (input.toUpperCase().equals(FindMaxString)) {
+				System.out.println(FindTheMax(tracking));
+				building = false;
+			}
+			else if (input.toUpperCase().equals(FindMinString)) {
+				System.out.println(FindTheMin(tracking));
+				building = false;
+			}
+			else {
+				System.out.println("Thats not an int");
+			}
+		} catch(Exception e ) {
+				
 		}
 	}
 	
