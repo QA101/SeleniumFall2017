@@ -6,7 +6,7 @@ public class FindMaxOrMin {
 	public static final String ExitString = "EXIT";
 	public static final String FindMaxString = "MAX";
 	public static final String FindMinString = "MIN";
-	int[] tracking = new int[5];
+	int[] tracking;
 	int curr = 0;
 	boolean running = true;
 	boolean building = true;
