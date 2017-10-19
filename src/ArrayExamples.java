@@ -2,7 +2,7 @@ package src;
 
 import java.util.Arrays;
 
-public class ArrayExample {
+public class ArrayExamples {
 
 	public static void main(String[] args) {
 		ReverseArrayWithinSingleArray();
