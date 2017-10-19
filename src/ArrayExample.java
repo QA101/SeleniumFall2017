@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ArrayExample {
 
 	public static void main(String[] args) {
-		OutOfBoundsExample();
+		ReverseArrayWithinSingleArray();
 	}
 	
 	/**
@@ -166,6 +166,56 @@ public class ArrayExample {
 			System.out.println(x[i]);
 		}
 				
+	}
+
+	/**
+	 * Shows how to reverse an array using a for loop
+	 */
+	public static void ReverseArrayUsingAnotherArray() {
+		int[] x = {1, 2, 3, 4};
+		int[] temp = new int[x.length];
+		
+		int curr = 0;
+		
+		System.out.println("Before:"+Arrays.toString(x));
+		
+		/**
+		 * Notice that this for loop is starting at the end of the array.
+		 * You must use length-1 because otherwise there will be an out of bound exception
+		 * There is another variable curr, to track the current location in the temp array
+		 * the curr variable is being incremented by 1 each time the for loop is executed
+		 */
+		for (int i =x.length-1; i>=0; i--) {
+			temp[curr] = x[i];
+			curr++;
+		}
+		x = temp;
+		System.out.println("After: "+Arrays.toString(x));		
+	}
+	
+	/**
+	 * Shows how to reverse an array using a for loop and another array
+	 */
+	public static void ReverseArrayWithinSingleArray() {
+		int[] x = {1, 2, 3, 4};
+		
+		System.out.println("Before:"+Arrays.toString(x));
+		
+		/**
+		 * This solution is more complicated but doesn't require additional variables
+		 * This for loop will continue until the mid-point of the array is reached because you only need to reverse until the midpoint
+		 * Steps:
+		 * 		You first find the two locations to be swapped
+		 * 		Store the first location's data in a temp variable
+		 * 		Populate the first location with data from the second location
+		 * 		Finally populate the second location with the temp data
+		 */
+		for (int i = 0 ; i<x.length /2; i++) {
+			int temp = x[i];
+			x[i] = x[x.length-i-1];
+			x[i] = temp;
+		}
+		System.out.println("After: "+Arrays.toString(x));		
 	}
 
 }
