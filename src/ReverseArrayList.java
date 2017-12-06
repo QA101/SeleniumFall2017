@@ -13,14 +13,6 @@ public class ReverseArrayList {
 		System.out.print(reverse(MyList).toString());
 	}
 	
-	/**
-	 * 
-	 * Takes an input ArrayList of strings and reverse the string.
-	 * Returns the reversed ArrayList
-	 * 
-	 * @param MyList
-	 * @return
-	 */
 	public static ArrayList<String> reverse(ArrayList<String> MyList){
 		ArrayList<String> temp = new ArrayList<String>();
 		int current = MyList.size()-1;
